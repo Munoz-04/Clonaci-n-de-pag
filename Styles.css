@@ -1,0 +1,613 @@
+/*#1 ESPACIO Mobile.css*/
+/***********************************/
+/*     Reinicio de los estilos     */
+/***********************************/
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  body {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+  hr {
+    width: 95%;;
+    margin: 0 auto;
+    margin-top: 50px;
+    clear: both;
+    border: none;
+    border-bottom: 1px solid #c8ccd1;
+  }
+  /**********************************/
+  /*     Estilos del encabezado     */
+  /**********************************/
+  .header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  /***** Título y logo del encabezado *****/
+  .header__textlogo {
+    min-width: 303px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 35px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57px;
+  }
+  .header__logo img {
+    width: inherit;
+    margin-right: 5px;
+  }
+  .header__title-container {
+    margin-left: 10px;
+    text-align: center;
+  }
+  .header__title {
+    font-family: "Linux Libertine Versalitas";
+    font-size: 3.2rem;
+    font-weight: 500;
+  }
+  .header__subtitle {
+    font-family: "Linux Libertine Regular";
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  /***** Entrada de busqueda *****/
+  .header__search-container {
+    min-width: 283px;
+    max-width: 450px;
+    width: 90%;
+    margin: 0.4rem auto 1.95rem;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    position: relative;
+  }
+  .header__input {
+    border: 1px solid #a3a9b0;
+    border-right: none;
+    background-color: #fff;
+    height: inherit;
+    flex-grow: 1;
+    min-width: 226px;
+    padding-left: 10px;
+    padding-right: 60px;
+    border-radius: 2px 0 0 2px;
+    outline: none;
+  }
+  .header__search-button {
+    height: inherit;
+    width: 56px;
+    border-radius: 0 2px 2px 0;
+    background-color: #36c;
+    border: 1px solid #36c;
+    color: #fff;
+    background-image: url("./assets/search-icon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px 22px;
+    outline: none;
+  }
+  .header__lang-container {
+    display: flex;
+    width: 45px;
+    height: 24px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    right: 65px;
+  }
+  .header__lang-arrow {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 22px;
+    transform: rotate(180deg);
+  }
+  /***** Pseudoclases para los elementos *****/
+  .header__input:hover {
+    border-color: #72777d;
+  }
+  .header__input:focus {
+    border-color: #36c;
+    box-shadow: inset 0 0 0 1px #36c;
+  }
+  .header__search-button:hover {
+    background-color: #447ff5;
+    border-color: #447ff5;
+    cursor: pointer;
+  }
+  .header__search-button:active {
+    background-color: #2a4b8d;
+    border-color: #2a4b8d;
+    box-shadow: none;
+  }
+  .header__lang-container:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
+  /***** Estilos de las viñetas de lenguajes  *****/
+  .header__central-featured {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .header__card {
+    width: 33%;
+    margin: 0 0 16px;
+    padding: 0 1.6rem;
+  }
+  .header__card-a {
+    text-decoration: none;
+    white-space: normal;
+    line-height: 19.5px;
+  }
+  .header__card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: #36c;
+  }
+  .header__card-text {
+    line-height: 1.4;
+    text-decoration: none;
+    color: #54595d;
+    font-size: 1.3rem;
+  }
+  /***** Pseudoclases para los elementos *****/
+  .header__card-a:hover {
+    color: #36c;
+    background-color: #eaecf0;
+    cursor: pointer;
+    display: block;
+  }
+  .header__card:hover .header__card-title {
+    text-decoration: underline;
+  }
+  .header__card:focus {
+    outline: 1px solid #36c;
+  }
+
+  /*#2 ESPACIO Table.css*/
+  .header__textlogo {
+    flex-direction: column;
+    height: auto;
+    position: relative;
+  }
+  .header__logo {
+    width: 200px;
+    height: 183px;
+    position: absolute;
+    top: 120px;
+    left: calc(100% -100px);
+  }
+  .header__subtitle {
+    font-size: 1.5rem;
+  }
+  .header__search-container {
+    order: 1;
+  }
+  .header__central-featured {
+    padding-top: 15px;
+    position: relative;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .header__card {
+    width: 50%;
+    height: 43px;
+  }
+  .header__card-title {
+    font-size: 1.6rem;
+  }
+  .header__card:nth-child(3), 
+  .header__card:nth-child(7) {
+    position: relative;
+    left: -80px;
+  }
+  .header__card:nth-child(4), 
+  .header__card:nth-child(8) {
+    position: relative;
+    left: 80px;
+  }
+  .header__card:nth-child(5) {
+    position: relative;
+    left: -100px;
+  }
+  .header__card:nth-child(6) {
+    position: relative;
+    left: 100px;
+  }
+  .header__search-container {
+    padding-top: 10px;
+  }
+  .lang-wrapper {
+    padding-top: 15px;
+  }
+  .footer-other-projects__card-container {
+    width: calc(100% / 3);
+  }
+  /*#3 ESPACIO*/
+  /***** Estilos de el boton de idioma *****/
+  .lang-wrapper {
+    text-align: center;
+    height: 36px;
+    max-height: 268px;
+  }
+  .lang-wrapper__button {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    padding: 0.6rem 1.2rem;
+    outline: 1.6rem solid #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 2px;
+    color: #36c;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    height: inherit;
+    max-width: 268px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .lang-wrapper__icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url("./assets/language-icon.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+  .lang-wrapper__arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url("./assets/blue-arrow-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .lang-wrapper__border {
+    background-color: #c8ccd1;
+    display: block;
+    position: relative;
+    max-width: 460px;
+    width: 80%;
+    margin: -1.6rem auto 1.6rem;
+    height: 1px;
+    transition: max-width .2s ease-out 400s;
+  }
+  /***** Pseudoclases del boton de lenguajes *****/
+  .lang-wrapper__button:hover {
+    background-color: #fff;
+    border-color: #a2a9b1;
+  }
+  .lang-wrapper__button:focus {
+    border-color: #36c;
+    box-shadow: inset 0 0 0 1px #36c;
+  }
+  /**********************************/
+  /*       Estilos del footer       */
+  /**********************************/
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 6px;
+    margin-bottom: 50px;
+    font-size: 1.3rem;
+  
+  }
+  /***** Estilos en el sidebar *****/
+  .footer-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 0 0 0;
+    color: #54595d;
+  }
+  .footer-sidebar__logo {
+    width: 42px;
+    height: 42px;
+  }
+  .footer-sidebar__content {
+    margin-top: 10px;
+    line-height: 2rem;
+  }
+  .footer-sidebar__anchor a {
+    outline: 0;
+    color: #36c;
+    text-decoration: none;
+    margin-top: 3px;
+  }
+  .footer-sidebar__anchor:hover {
+    text-decoration: underline;
+  }
+  .footer-other-projects {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top: 30px;
+  }
+  /***** Estilos en otros proyectos *****/
+  .footer-other-projects__card-container {
+    width: 50%;
+    height: 9rem;
+  }
+  .footer-other-projects__link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+    padding: 1rem;
+    white-space: nowrap;
+    color: #36c;
+  }
+  .footer-other-projects__icon {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+    margin: 5px 5px 0 0;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+  }
+  .footer-other-projects__content {
+    vertical-align: middle;
+    white-space: normal;
+    display: inline-block;
+    width: 65%;
+  }
+  .footer-other-projects__title {
+    display: block;
+    font-size: 1.4rem;
+  }
+  .foother-other-projects__text {
+    hyphens: auto;
+    color: #54595d;
+  }
+  .commons {
+    background-image: url("./assets/Commons-logo.svg");
+  }
+  .wikiviajes {
+    background-image: url("./assets/Wikiviajes-logo.png");
+  }
+  .wikcionario {
+    background-image: url("./assets/Wikcionary-logo.png");
+  }
+  .wikilibros {
+    background-image: url("./assets/Wikilibros-logo.png");
+  }
+  .wikinoticias {
+    background-image: url("./assets/Wikinoticias-logo.png");
+  }
+  .wikidata {
+    background-image: url("./assets/Wikidata-logo.png");
+  }
+  .wikiversidad {
+    background-image: url("./assets/Wikiversity-logo.png");
+  }
+  .wikiquote {
+    background-image: url("./assets/Wikiquote-logo.png");
+  }
+  .mediawiki {
+    background-image: url("./assets/MediaWiki-logo.png");
+  }
+  .wikisource {
+    background-image: url("./assets/Wikisource-logo.png");
+  }
+  .wikispecies {
+    background-image: url("./assets/Wikispecies-logo.png");
+  }
+  .meta-wiki {
+    background-image: url("./assets/Meta-Wiki-logo.png");
+  }
+  .footer-other-projects__link:hover {
+    background-color: #eaecf0;
+  }
+  .footer-other-projects__link:focus {
+    outline: 1px solid #36c;
+  }
+  /***** Estilos en App-badges *****/
+  .footer-app-badges {
+    width: 100%;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding-top: 15px;
+    margin-top: 8px;
+  }
+  .footer-app-badges__content {
+    color: #54595d;
+  }
+  .footer-app-badges__header {
+    font-weight: 700;
+    text-align: center;
+  }
+  .footer-app-badges__logo {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url("./assets/w-wikipedia-icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+  }
+  .footer-app-badges__title {
+    line-height: 20px;
+    padding-left: 20px;
+  }
+  .footer-app-badges__text {
+    margin: 13px 0;
+  }
+  .footer-app-badges__icons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .footer-app-badges__icon {
+    display: inline-block;
+    height: 38px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .android {
+    background-image: url("./assets/google-app-icon.png");
+    width: 124px;
+  }
+  .ios {
+    background-image: url("./assets/apple-app-icon.png");
+    width: 110px;
+  }
+  /***** Estilos del Site License *****/
+  .site-license small {
+    font-size: 1.3rem;
+  }
+  .site-license {
+    width: 100%;
+    line-height: 20px;
+    text-align: center;
+    margin: 14px 0;
+  }
+  .site-license a {
+    outline: 0;
+    color: #36c;
+    text-decoration: none;
+  }
+  .site-license a:hover {
+    text-decoration: underline;
+  }
+  .site-license__anchor a::before {
+    content: "\2022";
+  }
+
+/* ESPACIO */
+
+footer {
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 4.16rem 1.28rem 1.28rem;
+    flex-direction: column;
+  }
+  .footer-sidebar {
+    width: 35%;
+    float: left;
+    clear: left;
+    margin-bottom: 32px;
+    padding: 0;
+    vertical-align: top;
+  }
+  .footer-sidebar__container {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .footer-sidebar__logo {
+    position: absolute;
+    top: 0;
+    left: 0.8rem;
+  }
+  .footer-sidebar__content {
+    position: relative;
+    margin: 0;
+    padding-left: 6rem;
+    padding-right: 2rem;
+  }
+  .footer-sidebar__anchor {
+    position: relative;
+    margin: 0;
+    padding-left: 6rem;
+    padding-right: 2rem;
+    text-align: none;
+  }
+  .footer-other-projects {
+    width: 65%;
+    float: right;
+    padding-left: 1%;
+    order: 1;
+    position: absolute;
+    right: 0;
+    margin: 0;
+  }
+  .footer-sidebar__logo {
+    float: left;
+  }
+
+/* pppp                                                       */
+
+  .footer-app-badges {
+    width: 35%;
+    float: left;
+    margin: 0 0 32px 0;
+    padding: 0;
+  }
+  .footer-app-badges__content {
+    position: relative;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  .footer-app-badges__header {
+    position: relative;
+    margin: 0;
+    padding: 0.8rem 2rem 0 6rem;
+    text-align: left;
+  }
+  .footer-app-badges__logo {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 0.8rem;
+  }
+  .footer-app-badges__title {
+    display: block;
+    padding: 0;
+  }
+  .footer-app-badges__text {
+    position: relative;
+    margin: 1.3rem 0;
+    padding: 0 2rem 0 6rem;
+    text-align: left;
+  }
+  .footer-app-badges__icons {
+    position: relative;
+    margin: 0;
+    padding: 0 2rem 0.8rem 6rem;
+    justify-content: flex-start;
+  }
